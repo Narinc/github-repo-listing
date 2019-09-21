@@ -1,0 +1,112 @@
+ext.versions = [
+        code            : 2,
+        name            : '2.0',
+        minSdk          : 19,
+        targetSdk       : 28,
+        compileSdk      : 28,
+        supportLibs     : '28.0.0',
+        room            : '2.0.0-rc01',
+        archLifecycle   : '2.0.0',
+        rxAndroid       : '2.0.2',
+        rxJava          : '2.1.13',
+        retrofit        : '2.4.0',
+        okHttp          : '3.9.1',
+        dagger          : '2.19',
+        glide           : '4.8.0',
+        playServices    : '16.0.0',
+        mapsUtils       : '0.5+',
+        crashlytics     : '2.9.6@aar',
+        readMore        : '2.1.0',
+        guava           : '22.0-android',
+        gson            : '2.8.5',
+        androidX        : '1.0.2',
+        androidXrc      : '1.0.0-rc01',
+        material        : '1.1.0-alpha07',
+        constraintlayout: '1.1.2',
+        navigation      : '1.0.0-beta02',
+        paging          : '1.0.1',
+        circleimageview : '2.2.0',
+        photoView       : '2.0.0',
+        imageCropper    : '2.8.0',
+        expandablelayout: '2.9.2',
+        inputMask       : '4.3.0'
+]
+
+ext.libraries = [
+        annotations             : "androidx.annotation:annotation:$versions.androidX",
+        core                    : "androidx.core:core:$versions.androidX",
+        appCompat               : "androidx.appcompat:appcompat:$versions.androidX",
+        material                : "com.google.android.material:material:$versions.material",
+        recyclerView            : "androidx.recyclerview:recyclerview:$versions.androidX",
+        cardView                : "androidx.cardview:cardview:$versions.androidX",
+        legacySupport           : "androidx.legacy:legacy-support-v4:$versions.androidX",
+        constraintlayout        : "androidx.constraintlayout:constraintlayout:$versions.constraintlayout",
+        navigationFragment      : "android.arch.navigation:navigation-fragment:$versions.navigation",
+        navigationUi            : "android.arch.navigation:navigation-ui:$versions.navigation",
+
+        persistenceRoomRuntime  : "androidx.room:room-runtime:$versions.room",
+        persistenceRoomCompiler : "androidx.room:room-compiler:$versions.room",
+        lifecycleExtensions     : "androidx.lifecycle:lifecycle-extensions:$versions.archLifecycle",
+        lifecycleCompiler       : "androidx.lifecycle:lifecycle-compiler:$versions.archLifecycle",
+
+        rxJava                  : "io.reactivex.rxjava2:rxjava:$versions.rxJava",
+        rxAndroid               : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
+
+        okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$versions.okHttp",
+        retrofit                : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitGsonConverter   : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+        retrofitRxJavaAdapter   : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+        retrofitConverterScalars: "com.squareup.retrofit2:converter-scalars:$versions.retrofit",
+
+        dagger                  : "com.google.dagger:dagger:$versions.dagger",
+        daggerAndroid           : "com.google.dagger:dagger-android:$versions.dagger",
+        daggerAndroidSupport    : "com.google.dagger:dagger-android-support:$versions.dagger",
+        daggerCompiler          : "com.google.dagger:dagger-compiler:$versions.dagger",
+        daggerAndroidProcessor  : "com.google.dagger:dagger-android-processor:$versions.dagger",
+
+        glide                   : "com.github.bumptech.glide:glide:$versions.glide",
+        glideCompiler           : "com.github.bumptech.glide:compiler:$versions.glide",
+        playServicesLocation    : "com.google.android.gms:play-services-location:$versions.playServices",
+        androidMapsUtils        : "com.google.maps.android:android-maps-utils:$versions.mapsUtils",
+        playServicesMaps        : "com.google.android.gms:play-services-maps:$versions.playServices",
+        crashlytics             : "com.crashlytics.sdk.android:crashlytics:$versions.crashlytics",
+        readMoreTextView        : "com.borjabravo:readmoretextview:$versions.readMore",
+        guava                   : "com.google.guava:guava:$versions.guava",
+        gson                    : "com.google.code.gson:gson:$versions.gson",
+        circleimageview         : "de.hdodenhof:circleimageview:$versions.circleimageview",
+        photoView               : "com.github.chrisbanes:PhotoView:$versions.photoView",
+        imageCropper            : "com.theartofdev.edmodo:android-image-cropper:$versions.imageCropper",
+        expandablelayout        : "net.cachapa.expandablelayout:expandablelayout:$versions.expandablelayout",
+        inputMask               : "com.redmadrobot:input-mask-android:$versions.inputMask"
+]
+
+ext.versionsTest = [
+        junit   : '4.12',
+        mockito : '1.10.19',
+        hamcrest: '1.3',
+        runner  : '4.12',
+        rules   : '1.10.19',
+        dexMaker: '1.2',
+        espresso: '3.0.1',
+]
+
+ext.librariesTest = [
+        junit           : "junit:junit:$versionsTest.junit",
+        mockito         : "org.mockito:mockito-all:$versionsTest.mockito",
+        hamcrest        : "org.hamcrest:hamcrest-all:$versionsTest.hamcrest",
+        archCoreTesting : "android.arch.core:core-testing:$versions.archLifecycle",
+
+        runner          : "com.android.support.test:runner:$versionsTest.hamcrest",
+        rules           : "com.android.support.test:rules:$versionsTest.hamcrest",
+        roomTesting     : "androidx.room:room-testing:$versions.room",
+
+        mockitoCore     : "org.mockito:mockito-core:$versionsTest.mockito",
+        dexmaker        : "com.google.dexmaker:dexmaker:$versionsTest.dexMaker",
+        dexmakerMockito : "com.google.dexmaker:dexmaker-mockito:$versionsTest.dexMaker",
+
+        espressoCore    : "com.android.support.test.espresso:espresso-core:$versionsTest.espresso",
+        espressoContrib : "com.android.support.test.espresso:espresso-contrib:$versionsTest.espresso",
+        espressoIntents : "com.android.support.test.espresso:espresso-intents:$versionsTest.espresso",
+        idlingConcurrent: "com.android.support.test.espresso.idling:idling-concurrent:$versionsTest.espresso",
+        idlingResource  : "com.android.support.test.espresso:espresso-idling-resource:$versionsTest.espresso"
+]
