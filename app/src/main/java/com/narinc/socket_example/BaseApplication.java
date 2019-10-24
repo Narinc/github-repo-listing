@@ -4,7 +4,7 @@ import com.narinc.socket_example.di.AppComponent;
 import com.narinc.socket_example.di.DaggerAppComponent;
 
 import dagger.android.AndroidInjector;
-import dagger.android.DaggerApplication;
+import dagger.android.support.DaggerApplication;
 
 public class BaseApplication extends DaggerApplication {
     @Override
