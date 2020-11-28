@@ -1,6 +1,6 @@
-package com.narinc.socket_example.di.module;
+package com.narinc.github_repo_listing.di.module;
 
-import com.narinc.socket_example.ui.login.LoginFragment;
+import com.narinc.github_repo_listing.ui.login.LoginFragment;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

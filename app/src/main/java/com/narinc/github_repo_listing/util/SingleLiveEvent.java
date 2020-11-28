@@ -1,4 +1,4 @@
-package com.narinc.socket_example.util;
+package com.narinc.github_repo_listing.util;
 
 
 import android.util.Log;

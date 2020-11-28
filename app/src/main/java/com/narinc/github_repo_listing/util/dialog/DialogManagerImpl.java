@@ -1,4 +1,4 @@
-package com.narinc.socket_example.util.dialog;
+package com.narinc.github_repo_listing.util.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -17,7 +17,7 @@ import androidx.appcompat.widget.SearchView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
-import com.narinc.socket_example.R;
+import com.narinc.github_repo_listing.R;
 
 import java.util.List;
 

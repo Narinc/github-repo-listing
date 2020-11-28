@@ -1,10 +1,10 @@
-package com.narinc.socket_example.di.module;
+package com.narinc.github_repo_listing.di.module;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.narinc.socket_example.BuildConfig;
-import com.narinc.socket_example.util.dialog.DialogManager;
-import com.narinc.socket_example.util.dialog.DialogManagerImpl;
+import com.narinc.github_repo_listing.BuildConfig;
+import com.narinc.github_repo_listing.util.dialog.DialogManager;
+import com.narinc.github_repo_listing.util.dialog.DialogManagerImpl;
 
 import java.util.concurrent.TimeUnit;
 

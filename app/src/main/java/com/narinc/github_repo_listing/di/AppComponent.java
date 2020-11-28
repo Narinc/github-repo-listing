@@ -1,11 +1,11 @@
-package com.narinc.socket_example.di;
+package com.narinc.github_repo_listing.di;
 
 import android.app.Application;
 
-import com.narinc.socket_example.BaseApplication;
-import com.narinc.socket_example.di.module.ActivityBuilderModule;
-import com.narinc.socket_example.di.module.AppModule;
-import com.narinc.socket_example.di.module.ContextModule;
+import com.narinc.github_repo_listing.BaseApplication;
+import com.narinc.github_repo_listing.di.module.ActivityBuilderModule;
+import com.narinc.github_repo_listing.di.module.AppModule;
+import com.narinc.github_repo_listing.di.module.ContextModule;
 
 import javax.inject.Singleton;
 

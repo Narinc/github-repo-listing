@@ -1,4 +1,4 @@
-package com.narinc.socket_example;
+package com.narinc.github_repo_listing;
 
 import org.junit.Test;
 

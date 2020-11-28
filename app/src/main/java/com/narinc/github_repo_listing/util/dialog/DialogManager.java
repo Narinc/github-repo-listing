@@ -1,4 +1,4 @@
-package com.narinc.socket_example.util.dialog;
+package com.narinc.github_repo_listing.util.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;

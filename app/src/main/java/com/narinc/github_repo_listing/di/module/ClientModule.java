@@ -1,4 +1,4 @@
-package com.narinc.socket_example.di.module;
+package com.narinc.github_repo_listing.di.module;
 
 import dagger.Module;
 

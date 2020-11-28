@@ -1,4 +1,4 @@
-package com.narinc.socket_example;
+package com.narinc.github_repo_listing;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.narinc.socket_example", appContext.getPackageName());
+        assertEquals("com.narinc.github_repo_listing", appContext.getPackageName());
     }
 }

@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='socket_example'
+rootProject.name='github_repo_listing'

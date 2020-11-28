@@ -1,4 +1,4 @@
-package com.narinc.socket_example.ui.login;
+package com.narinc.github_repo_listing.ui.login;
 
 
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.narinc.socket_example.R;
+import com.narinc.github_repo_listing.R;
 
 import dagger.android.support.DaggerFragment;
 

@@ -1,4 +1,4 @@
-package com.narinc.socket_example.di.util;
+package com.narinc.github_repo_listing.di.util;
 
 import androidx.lifecycle.ViewModel;
 

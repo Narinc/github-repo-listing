@@ -1,8 +1,8 @@
-package com.narinc.socket_example.di.module;
+package com.narinc.github_repo_listing.di.module;
 
 import androidx.lifecycle.ViewModelProvider;
 
-import com.narinc.socket_example.di.util.ViewModelFactory;
+import com.narinc.github_repo_listing.di.util.ViewModelFactory;
 
 import dagger.Binds;
 import dagger.Module;

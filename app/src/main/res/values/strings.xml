@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">socket_example</string>
+    <string name="app_name">Github Repo Listing</string>
     <string name="no_internet_connection">No internet connection!</string>
     <string name="error">Error</string>
 </resources>
