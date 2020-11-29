@@ -4,4 +4,9 @@
     <string name="error">Error</string>
     <string name="submit">Submit</string>
     <string name="username">Username</string>
+    <string name="repository">Repository</string>
+
+    <string name="stargazers_count">Stars: %1$s</string>
+    <string name="open_issues">Open Issues: %1$s</string>
+
 </resources>

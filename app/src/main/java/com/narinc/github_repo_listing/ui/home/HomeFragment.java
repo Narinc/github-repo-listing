@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.narinc.github_repo_listing.databinding.FragmentHomeBinding;
 import com.narinc.github_repo_listing.domain.model.Repository;
@@ -41,10 +42,15 @@ public class HomeFragment extends DaggerFragment {
         if (binding.repositories.getAdapter() instanceof RepositoryAdapter) {
             ((RepositoryAdapter) binding.repositories.getAdapter()).submitList(repositories);
         } else {
-            RepositoryAdapter adapter = new RepositoryAdapter();
+            RepositoryAdapter adapter = new RepositoryAdapter(this::navigateDetail);
             binding.repositories.setAdapter(adapter);
             adapter.submitList(repositories);
         }
+    }
+
+    private void navigateDetail(Repository repository) {
+        NavHostFragment.findNavController(this)
+                .navigate(HomeFragmentDirections.actionLoginFragmentToDetailFragment(repository));
     }
 
 }

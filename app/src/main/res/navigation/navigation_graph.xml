@@ -8,5 +8,19 @@
         android:id="@+id/loginFragment"
         android:name="com.narinc.github_repo_listing.ui.home.HomeFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_loginFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.narinc.github_repo_listing.ui.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="@string/repository"
+            app:argType="com.narinc.github_repo_listing.domain.model.Repository"
+            app:nullable="false" />
+    </fragment>
 </navigation>

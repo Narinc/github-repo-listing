@@ -1,5 +1,6 @@
 package com.narinc.github_repo_listing.di.module;
 
+import com.narinc.github_repo_listing.ui.detail.DetailFragment;
 import com.narinc.github_repo_listing.ui.home.HomeFragment;
 
 import dagger.Module;
@@ -12,4 +13,7 @@ import dagger.android.ContributesAndroidInjector;
 public interface MainActivityBuilderModule {
     @ContributesAndroidInjector
     HomeFragment provideHomeFragment();
+
+    @ContributesAndroidInjector
+    DetailFragment provideDetailFragment();
 }

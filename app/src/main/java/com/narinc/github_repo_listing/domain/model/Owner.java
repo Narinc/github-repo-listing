@@ -3,25 +3,28 @@ package com.narinc.github_repo_listing.domain.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
 
 public class Owner implements Parcelable {
     @SerializedName("login")
-    private int login;
+    @Expose
+    private String login;
     @SerializedName("avatar_url")
-    private int avatarUrl;
+    @Expose
+    private String avatarUrl;
 
     protected Owner(Parcel in) {
-        login = in.readInt();
-        avatarUrl = in.readInt();
+        login = in.readString();
+        avatarUrl = in.readString();
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(login);
-        dest.writeInt(avatarUrl);
+        dest.writeString(login);
+        dest.writeString(avatarUrl);
     }
 
     @Override
@@ -41,11 +44,11 @@ public class Owner implements Parcelable {
         }
     };
 
-    public int getLogin() {
+    public String getLogin() {
         return login;
     }
 
-    public int getAvatarUrl() {
+    public String getAvatarUrl() {
         return avatarUrl;
     }
 
@@ -54,7 +57,7 @@ public class Owner implements Parcelable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Owner owner = (Owner) o;
-        return login == owner.login;
+        return login.equals(owner.login);
     }
 
     @Override

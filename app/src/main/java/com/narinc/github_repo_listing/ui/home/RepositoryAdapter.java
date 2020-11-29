@@ -12,8 +12,15 @@ import com.narinc.github_repo_listing.domain.model.Repository;
 
 public class RepositoryAdapter extends ListAdapter<Repository, RepositoryAdapter.ViewHolder> {
 
-    RepositoryAdapter() {
+    private final OnClickRepository onClickRepository;
+
+    public interface OnClickRepository{
+        void onClicked(Repository repository);
+    }
+
+    RepositoryAdapter(OnClickRepository onClickRepository) {
         super(Repository.DIFF_CALLBACK);
+        this.onClickRepository = onClickRepository;
     }
 
     @NonNull
@@ -21,6 +28,7 @@ public class RepositoryAdapter extends ListAdapter<Repository, RepositoryAdapter
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         ItemRepositoryBinding binding = ItemRepositoryBinding.inflate(inflater, parent, false);
+        binding.setClickListener(onClickRepository);
         return new ViewHolder(binding);
     }
 

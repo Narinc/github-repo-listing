@@ -4,10 +4,15 @@
         <variable
             name="data"
             type="com.narinc.github_repo_listing.domain.model.Repository" />
+
+        <variable
+            name="clickListener"
+            type="com.narinc.github_repo_listing.ui.home.RepositoryAdapter.OnClickRepository" />
     </data>
     <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
+        android:onClick="@{() -> clickListener.onClicked(data)}"
         android:layout_height="wrap_content"
         android:layout_margin="8dp">
 
