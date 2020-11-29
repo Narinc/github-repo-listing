@@ -2,4 +2,6 @@
     <string name="app_name">Github Repo Listing</string>
     <string name="no_internet_connection">No internet connection!</string>
     <string name="error">Error</string>
+    <string name="submit">Submit</string>
+    <string name="username">Username</string>
 </resources>

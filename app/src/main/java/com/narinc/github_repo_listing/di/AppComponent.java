@@ -6,6 +6,8 @@ import com.narinc.github_repo_listing.BaseApplication;
 import com.narinc.github_repo_listing.di.module.ActivityBuilderModule;
 import com.narinc.github_repo_listing.di.module.AppModule;
 import com.narinc.github_repo_listing.di.module.ContextModule;
+import com.narinc.github_repo_listing.di.module.ViewModelModule;
+import com.narinc.github_repo_listing.di.module.home.HomeModule;
 
 import javax.inject.Singleton;
 
@@ -19,7 +21,9 @@ import dagger.android.support.DaggerApplication;
 @Component(modules = {ContextModule.class,
         AppModule.class,
         AndroidSupportInjectionModule.class,
-        ActivityBuilderModule.class})
+        ActivityBuilderModule.class,
+        ViewModelModule.class,
+        HomeModule.class})
 public interface AppComponent extends AndroidInjector<DaggerApplication> {
 
     void inject(BaseApplication application);

@@ -18,10 +18,7 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-@Module(includes = {
-        ViewModelModule.class,
-        ClientModule.class
-})
+@Module
 public class AppModule {
 
     @Provides
@@ -54,7 +51,7 @@ public class AppModule {
         builder.addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(okHttpClient)
-                .baseUrl("https://wsb.ver.us/SERVICE/JSer/");
+                .baseUrl("https://api.github.com/");
         return builder.build();
     }
 

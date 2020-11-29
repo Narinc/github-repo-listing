@@ -13,7 +13,7 @@
         android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:name="com.narinc.github_repo_listing.BaseApplication"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.App"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name="com.narinc.github_repo_listing.MainActivity">
             <intent-filter>

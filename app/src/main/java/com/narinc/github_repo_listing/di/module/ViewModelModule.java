@@ -12,7 +12,6 @@ import dagger.Module;
  */
 @Module
 public interface ViewModelModule {
-
     @Binds
     ViewModelProvider.Factory bindViewModelFactory(ViewModelFactory factory);
 }
