@@ -38,6 +38,10 @@ dependencies {
     implementation libraries.retrofitRxJavaAdapter
     implementation libraries.lifecycleExtensions
 
+    implementation libraries.persistenceRoomRuntime
+    implementation libraries.persistenceRoomRxJava2
+    annotationProcessor libraries.persistenceRoomCompiler
+
     implementation libraries.navigationFragment
     implementation libraries.navigationUi
 

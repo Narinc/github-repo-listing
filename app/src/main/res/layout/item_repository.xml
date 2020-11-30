@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <variable
             name="data"
-            type="com.narinc.github_repo_listing.domain.model.Repository" />
+            type="com.narinc.github_repo_listing.data.persistance.Repository" />
 
         <variable
             name="clickListener"
             type="com.narinc.github_repo_listing.ui.home.RepositoryAdapter.OnClickRepository" />
     </data>
+
     <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:onClick="@{() -> clickListener.onClicked(data)}"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:layout_margin="8dp"
+        android:onClick="@{() -> clickListener.onClicked(data)}">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="32dp"
+            android:ellipsize="end"
+            android:lines="1"
             android:padding="16dp"
             android:text="@{data.name}"
-            tools:text="@tools:sample/full_names" />
+            tools:text="@tools:sample/lorem/random" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -30,7 +36,7 @@
             android:layout_marginEnd="8dp"
             android:padding="8dp"
             android:src="@drawable/ic_baseline_star_rate_24"
-            android:visibility="gone"
+            app:visibility="@{data.favorite}"
             tools:visibility="visible" />
     </com.google.android.material.card.MaterialCardView>
 </layout>

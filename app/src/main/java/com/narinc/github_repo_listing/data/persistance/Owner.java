@@ -1,4 +1,4 @@
-package com.narinc.github_repo_listing.domain.model;
+package com.narinc.github_repo_listing.data.persistance;
 
 import android.os.Parcel;
 import android.os.Parcelable;

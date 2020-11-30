@@ -1,6 +1,6 @@
 package com.narinc.github_repo_listing.data;
 
-import com.narinc.github_repo_listing.domain.model.Repository;
+import com.narinc.github_repo_listing.data.persistance.Repository;
 
 import java.util.List;
 

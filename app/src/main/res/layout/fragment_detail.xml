@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
-            name="data"
-            type="com.narinc.github_repo_listing.domain.model.Repository" />
+            name="vm"
+            type="com.narinc.github_repo_listing.ui.detail.DetailViewModel" />
     </data>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,20 +17,20 @@
         tools:context=".ui.detail.DetailFragment">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appbarlayout"
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
             android:stateListAnimator="@animator/appbar_elevation">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbarSurveyList"
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-                app:title="@{data.name}"
+                app:title="@{vm.repository.name}"
                 app:titleTextColor="@color/white"
                 tools:title="@tools:sample/full_names" />
 
@@ -48,7 +47,7 @@
                 android:layout_height="120dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                app:avatar="@{data.owner.avatarUrl}"
+                app:avatar="@{vm.repository.owner.avatarUrl}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -58,9 +57,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:text="@{data.owner.login}"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@{vm.repository.owner.login}"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
                 tools:text="@tools:sample/full_names" />
@@ -70,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@{String.format(@string/stargazers_count, data.stargazersCount)}"
+                android:text="@{String.format(@string/stargazers_count, vm.repository.stargazersCount)}"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/imageView"
                 tools:text="Stars: 178" />
@@ -80,10 +77,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@{String.format(@string/open_issues, data.openIssuesCount)}"
+                android:text="@{String.format(@string/open_issues, vm.repository.openIssuesCount)}"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
                 tools:text="Open Issues: 3" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/favorite_bg"
+                android:onClick="@{() -> vm.toggle(vm.repository)}"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:selected="@{vm.fav}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

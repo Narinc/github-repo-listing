@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.narinc.github_repo_listing.databinding.FragmentHomeBinding;
-import com.narinc.github_repo_listing.domain.model.Repository;
+import com.narinc.github_repo_listing.data.persistance.Repository;
 
 import java.util.List;
 
@@ -23,6 +23,7 @@ public class HomeFragment extends DaggerFragment {
 
     @Inject
     ViewModelProvider.Factory viewModelFactory;
+
     private FragmentHomeBinding binding;
 
     @Override
@@ -44,6 +45,7 @@ public class HomeFragment extends DaggerFragment {
         } else {
             RepositoryAdapter adapter = new RepositoryAdapter(this::navigateDetail);
             binding.repositories.setAdapter(adapter);
+            binding.repositories.setHasFixedSize(true);
             adapter.submitList(repositories);
         }
     }

@@ -20,7 +20,7 @@
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="@string/repository"
-            app:argType="com.narinc.github_repo_listing.domain.model.Repository"
+            app:argType="com.narinc.github_repo_listing.data.persistance.Repository"
             app:nullable="false" />
     </fragment>
 </navigation>

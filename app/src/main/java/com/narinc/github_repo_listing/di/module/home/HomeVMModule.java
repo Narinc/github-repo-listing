@@ -1,4 +1,4 @@
-package com.narinc.github_repo_listing.di.module;
+package com.narinc.github_repo_listing.di.module.home;
 
 import androidx.lifecycle.ViewModel;
 

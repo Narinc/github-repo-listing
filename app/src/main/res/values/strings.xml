@@ -8,5 +8,6 @@
 
     <string name="stargazers_count">Stars: %1$s</string>
     <string name="open_issues">Open Issues: %1$s</string>
+    <string name="favorite">Favorite</string>
 
 </resources>

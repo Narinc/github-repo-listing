@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.narinc.github_repo_listing.databinding.ItemRepositoryBinding;
-import com.narinc.github_repo_listing.domain.model.Repository;
+import com.narinc.github_repo_listing.data.persistance.Repository;
 
 public class RepositoryAdapter extends ListAdapter<Repository, RepositoryAdapter.ViewHolder> {
 

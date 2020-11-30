@@ -1,19 +1,24 @@
-package com.narinc.github_repo_listing.domain.model;
+package com.narinc.github_repo_listing.data.persistance;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
 
+@Entity(tableName = "Repositories")
 public class Repository implements Parcelable {
     @SerializedName("id")
     @Expose
+    @PrimaryKey
     private int id;
     @SerializedName("name")
     @Expose
@@ -28,6 +33,22 @@ public class Repository implements Parcelable {
     @Expose
     private Owner owner;
 
+    private boolean favorite;
+
+    @Ignore
+    public Repository() {
+    }
+
+    public Repository(int id, String name, String stargazersCount, String openIssuesCount, Owner owner, boolean favorite) {
+        this.id = id;
+        this.name = name;
+        this.stargazersCount = stargazersCount;
+        this.openIssuesCount = openIssuesCount;
+        this.owner = owner;
+        this.favorite = favorite;
+    }
+
+    @Ignore
     protected Repository(Parcel in) {
         id = in.readInt();
         name = in.readString();
@@ -80,6 +101,14 @@ public class Repository implements Parcelable {
 
     public Owner getOwner() {
         return owner;
+    }
+
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
     }
 
     @Override
