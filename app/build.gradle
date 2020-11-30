@@ -13,9 +13,30 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
+
+    signingConfigs {
         release {
+            storeFile file('ingchallenge.jks')
+            storePassword 'qeaszqeasz'
+            keyAlias 'ingchallenge2020'
+            keyPassword 'qeaszqeasz'
+        }
+    }
+
+    buildTypes {
+        debug {
             minifyEnabled false
+            debuggable true
+            testCoverageEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true   // Obfuscate and minify codes
+            shrinkResources true // Remove unused resources
+            debuggable false
+            testCoverageEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
